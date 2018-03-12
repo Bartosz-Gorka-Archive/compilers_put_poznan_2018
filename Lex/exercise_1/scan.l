@@ -12,12 +12,13 @@
                               sscanf(yytext, "%d", &selected_column);
                               BEGIN column;
                             }
-<column>[a-zA-Z0-9 ]{5}[ ]  {
+<column>[a-zA-Z0-9 ]{5}\    {
                               current_column++;
-                              if(current_column == selected_column)
-                                printf("%s\n", yytext);
+                              if(current_column == selected_column) ECHO;
                             }
-<column>\n                  { current_column = 0; }
+<column>\n                  {
+                              current_column = 0;
+                            }
 .                           ;
 
  /* == END RULES == */
