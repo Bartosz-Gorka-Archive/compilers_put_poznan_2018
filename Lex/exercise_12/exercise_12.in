@@ -1,0 +1,14 @@
+[Tooldir]
+BcLib=C:\APPS\BC\LIB
+BcInclude=C:\APPS\BC\INCLUDE
+[IDE]
+DefaultDesktopDir=C:\APPS\BC\BIN
+HelpDir=C:\APPS\BC\BIN
+[Startup]
+State=0
+Left=21
+Right=21
+Width=946
+Height=663
+[Project]
+Lastproj=c:\apps\bc\bin\proj0002.ide
