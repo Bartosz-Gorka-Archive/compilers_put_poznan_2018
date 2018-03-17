@@ -4,7 +4,6 @@
   int yylex(void);
   int value;
 %}
-%s space
 %%
 
 ^\ *[0-9]*[05]+\ */\n { ECHO; printf("(+)"); }

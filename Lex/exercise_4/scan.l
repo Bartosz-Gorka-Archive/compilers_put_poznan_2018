@@ -3,7 +3,6 @@
   int yywrap(void);
   int yylex(void);
 %}
-%s space
 %%
 
 ^\ * ;
