@@ -24,7 +24,7 @@ F : N '(' P ')' ';'   {
                         printf("call %s\n", $1);
                         if($3) {
                           printf("add sp, %d\n\n", $3);
-                          }
+                        }
                       }
   ;
 N : id        { $$ = $1; }
