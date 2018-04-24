@@ -3,15 +3,15 @@
   void yyerror(const char *,...);
   int yyparse(void);
   extern int yylineno;
-#include <stdio.h>
+  #include <stdio.h>
 %}
 %%
 
-S : A B C { if($1 == $2 && $2 == $3) {
-                printf("OK\n");
-              } else {
-                printf("ERROR\n");
-              }
+S : A B C   {
+              if($1 == $2 && $2 == $3)
+                puts("OK");
+              else
+                puts("ERROR");
             }
   ;
 A :         { $$ = 0;       }
@@ -25,8 +25,9 @@ C :         { $$ = 0;       }
   ;
 
 %%
-void yyerror(const char *fmt, ...)
-{
-  printf("%s in line %d\n", fmt, yylineno);
+void yyerror(const char *fmt, ...) {
+  printf("%s\n", fmt);
 }
-int main() { return yyparse(); }
+int main() {
+  return yyparse();
+}
